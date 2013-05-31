@@ -1,0 +1,29 @@
+// General
+"WELCOME_MESSAGE" = "ご利用頂きありがとうございます。ベッドインがあなたのパートナーとなれたなら幸いです。";
+"UPDATED_MESSAGE" = "ご利用頂きありがとうございます。ベッドインがあなたのパートナーとなれたなら幸いです。";
+
+// application_table_view_controller
+"Close" = "閉じる";
+
+// info_table_view_controller
+"OVERVIEW" = "概要";
+"USAGE" = "使用方法";
+"SUPPORT" = "サポート";
+"PRODUCTS" = "製品";
+"ABOUT_US" = "伊藤ソフトデザインについて";
+"COPYRIGHT" = "Copyright";
+"ACKNOWLEDGEMENT" = "謝辞";
+"Information" = "情報";
+"Version" = "バージョン";
+"English" = "英語";
+
+// TimeTableViewController
+"Now" = "現在";
+
+// event_selection_table_view_controller
+"Up-comming" = "これから開催";
+"Past" = "終了";
+
+
+// web_viwe_controller
+"Failed to load!<br />Please check network settings.<br />Back and try again!" = "読込みに失敗しました。<br />ネットワーク設定を確認して下さい。<br />一旦戻って再度選択して下さい。";

@@ -1,0 +1,13 @@
+// General
+"WELCOME_MESSAGE" = "Thank you for downloading. We hope it will be your partner.";
+"UPDATED_MESSAGE" = "Thank you for downloading. We hope it will be your partner.";
+
+
+// info_table_view_controller
+"OVERVIEW" = "Overview";
+"USAGE" = "Usage";
+"SUPPORT" = "Support";
+"PRODUCTS" = "Our Products";
+"ABOUT_US" = "About us";
+"COPYRIGHT" = "Copyright";
+"ACKNOWLEDGEMENT" = "Acknowledgement";
