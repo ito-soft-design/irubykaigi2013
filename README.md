@@ -23,11 +23,18 @@ Requirement
 Getting started
 ===
 
-Just run ```bundle``` and ```rake``` .
+If you not install the CocoaPods run first above commands on your Terminal.app .  
 
 ```sh
-> bundle
-> rake
+$ gem install cocoapods
+$ pod setup
+```
+
+After install CocoaPods; Just run ```bundle``` and ```rake``` .
+
+```sh
+$ bundle
+$ rake
 ```
 
 Author
@@ -44,3 +51,9 @@ License
 ===
 MIT License  
 
+
+
+Documents for Japanese
+=
+CocoaPodsが初めての方    
+[CocoaPodsの導入(Objective-C編)](http://d.hatena.ne.jp/gutskun/20120924/1348500783)
