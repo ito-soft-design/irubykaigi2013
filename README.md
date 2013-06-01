@@ -23,7 +23,7 @@ Requirement
 Getting started
 ===
 
-If you not install the CocoaPods run first above commands on your Terminal.app .  
+If you haven't installed the CocoaPods, run first above commands on your Terminal.app .    
 
 ```sh
 $ gem install cocoapods
