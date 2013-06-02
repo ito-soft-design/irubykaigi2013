@@ -131,14 +131,12 @@ class InfoTableViewController < UITableViewController
         open_mail_form
         self.tableView.deselectRowAtIndexPath indexPath, animated:true
       else
-        sb = UIStoryboard.storyboardWithName "Storyboard", bundle:nil
-        c = sb.instantiateViewControllerWithIdentifier("WebViewController")
+        c = controller_by_name "WebViewController"
         c.url = NSURL.URLWithString @info_source[indexPath.row][:url]
         self.navigationController << c
       end
     when COPYRIGHT_SECTION
-        sb = UIStoryboard.storyboardWithName "Storyboard", bundle:nil
-        c = sb.instantiateViewControllerWithIdentifier("WebViewController")
+        c = controller_by_name "WebViewController"
         c.url = NSURL.URLWithString @copyright_source[indexPath.row][:url]
         self.navigationController << c
     end

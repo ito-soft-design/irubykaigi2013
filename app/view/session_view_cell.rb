@@ -177,8 +177,7 @@ class SessionViewCell < UIView
 
     self.on_tap do
       if disclosure_indicator_visible?
-        sb = UIStoryboard.storyboardWithName "Storyboard", bundle:nil
-        @detail_controller = sb.instantiateViewControllerWithIdentifier "SessionDetailViewController"
+        @detail_controller = controller_by_name "SessionDetailViewController"
         @detail_controller.session = self.session
         timeTableViewController.show_navigation_bar(false)
         navigationController << @detail_controller
