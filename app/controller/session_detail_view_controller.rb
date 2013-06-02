@@ -14,9 +14,4 @@ class SessionDetailViewController < UIViewController
     session = nil
   end
   
-# DELETEME:
-  def session= session
-    @session = session
-  end
-
 end
