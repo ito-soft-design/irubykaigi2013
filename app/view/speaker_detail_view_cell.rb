@@ -130,43 +130,34 @@ class SpeakerDetailViewCell < SpeakerViewCell
     l.font = font_name.uifont(24)
     l.numberOfLines = 0
 
-    # subtitle label
-    l = UILabel.new
-    l.font = font_name.uifont(14)
-    l.backgroundColor = :clear.uicolor
-    l.numberOfLines = 0
-    self << l
-    self.subtitleLabel = l
-
-    # abstract label
-    l = UILabel.new
-    l.backgroundColor = :clear.uicolor
-    l.numberOfLines = 0
-    l.font = font_name.uifont(14)
-    self << l
-    self.abstractLabel = l
-    
-    # twitter button
-    b = UIButton.custom
-    b.setImage "twitter.png".uiimage, forState:UIControlStateNormal
-    b.setTitleColor :black.uicolor, forState:UIControlStateNormal
-    b.addTarget self, action:"didClickTwitterButton:", forControlEvents:UIControlEventTouchUpInside
-    b.titleLabel.font = font_name.uifont(14)
-    b.titleLabel.adjustsFontSizeToFitWidth = true
-    b.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft
-    self << b
-    self.twitterButton = b
-
-    # github button
-    b = UIButton.custom
-    b.setImage "github.png".uiimage, forState:UIControlStateNormal
-    b.setTitleColor :black.uicolor, forState:UIControlStateNormal
-    b.addTarget self, action:"didClickGithubButton:", forControlEvents:UIControlEventTouchUpInside
-    b.titleLabel.font = font_name.uifont(14)
-    b.titleLabel.adjustsFontSizeToFitWidth = true
-    b.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft
-    self << b
-    self.githubButton = b
+    self.subtitleLabel = create_label
+    self.abstractLabel = create_label    
+    self.twitterButton = create_button image_name:"twitter.png", action:"didClickTwitterButton:"
+    self.githubButton = create_button image_name:"github.png", action:"didClickGithubButton:"
   end
+
+  self
+  
+  def create_label
+    l = UILabel.new
+    l.font = font_name.uifont(14)
+    l.backgroundColor = :clear.uicolor
+    l.numberOfLines = 0
+    self << l
+    l
+  end
+  
+  def create_button  h = {}
+    b = UIButton.custom
+    b.setImage h[:image_name].uiimage, forState:UIControlStateNormal if h[:image_name]
+    b.setTitleColor :black.uicolor, forState:UIControlStateNormal
+    b.addTarget self, action:h[:action], forControlEvents:UIControlEventTouchUpInside if h[:action]
+    b.titleLabel.font = font_name.uifont(14)
+    b.titleLabel.adjustsFontSizeToFitWidth = true
+    b.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft
+    self << b
+    b
+  end
+  
 
 end
